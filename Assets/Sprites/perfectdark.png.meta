@@ -1,0 +1,1243 @@
+fileFormatVersion: 2
+guid: d2de424a691441c4a8bec2fa7c51c349
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7826612305434303138
+    second: perfectdark_pg_1
+  - first:
+      213: -5788290249391977329
+    second: perfectdark_pg_1_0
+  - first:
+      213: 2641961243477468123
+    second: perfectdark_pg_1_1
+  - first:
+      213: 8330149765598499142
+    second: perfectdark_pg_1_2
+  - first:
+      213: -5080124913968627958
+    second: perfectdark_pg_1_3
+  - first:
+      213: -1996239033967088809
+    second: perfectdark_pg_1_5
+  - first:
+      213: -7566925429218089238
+    second: perfectdark_pg_1_8
+  - first:
+      213: -190493737907020990
+    second: perfectdark_pg_1_9
+  - first:
+      213: -699309376759246106
+    second: perfectdark_pg_2
+  - first:
+      213: 1821038250276003952
+    second: perfectdark_9
+  - first:
+      213: 1714889859349342291
+    second: perfectdark_10
+  - first:
+      213: 8571859922949633461
+    second: perfectdark_11
+  - first:
+      213: 1813931812646293503
+    second: perfectdark_12
+  - first:
+      213: -7667262607748350988
+    second: perfectdark_13
+  - first:
+      213: -7016490604597067474
+    second: perfectdark_14
+  - first:
+      213: 5443105760793687515
+    second: perfectdark_15
+  - first:
+      213: -5695102752669080037
+    second: perfectdark_pg_3
+  - first:
+      213: -1187761780020269884
+    second: perfectdark_17
+  - first:
+      213: 3106879599153696465
+    second: perfectdark_18
+  - first:
+      213: -56051835573387737
+    second: perfectdark_19
+  - first:
+      213: 3684566720344894386
+    second: perfectdark_20
+  - first:
+      213: -1611584262657614574
+    second: perfectdark_21
+  - first:
+      213: 1460301206039128296
+    second: perfectdark_22
+  - first:
+      213: 8950846451737907694
+    second: perfectdark_23
+  - first:
+      213: 4996097008261646531
+    second: perfectdark_gr
+  - first:
+      213: 6749460799510208993
+    second: perfectdark_gr_0
+  - first:
+      213: 4663734450369168098
+    second: perfectdark_gr_1
+  - first:
+      213: -4289529266382645644
+    second: perfectdark_gr_2
+  - first:
+      213: -5978568212566124801
+    second: perfectdark_gr_3
+  - first:
+      213: -7163494036088297968
+    second: perfectdark_gr_5
+  - first:
+      213: 7570591958755509145
+    second: perfectdark_gr_8
+  - first:
+      213: 8500330232639633728
+    second: perfectdark_gr_9
+  - first:
+      213: 2646936722262529767
+    second: perfectdark_gd
+  - first:
+      213: -5436080107990904178
+    second: perfectdark_bd
+  - first:
+      213: 1927491298078600105
+    second: perfectdark_pr
+  - first:
+      213: -3165758381106782259
+    second: perfectdark_pg_1_4
+  - first:
+      213: 6452593868428554218
+    second: perfectdark_pg_1_6
+  - first:
+      213: -4009577683838591041
+    second: perfectdark_pg_1_7
+  - first:
+      213: -8234329107420375830
+    second: perfectdark_38
+  - first:
+      213: -2119580014079674074
+    second: perfectdark_39
+  - first:
+      213: -6600673840486974106
+    second: perfectdark_40
+  - first:
+      213: -2747710678975431171
+    second: perfectdark_41
+  - first:
+      213: -5203471194532683013
+    second: perfectdark_42
+  - first:
+      213: 6270670896083814442
+    second: perfectdark_43
+  - first:
+      213: 749334304309282253
+    second: perfectdark_gr_6
+  - first:
+      213: 8424318034724277427
+    second: perfectdark_gr_7
+  - first:
+      213: -6925480065835368525
+    second: perfectdark_gr_4
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: perfectdark_pg_1
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 512
+        width: 166
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7709e7e754af34490451de01b8d3f7
+      internalID: 7826612305434303138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_0
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 512
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b473a983e0477c4b8b3c83ef705d689
+      internalID: -5788290249391977329
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 512
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cace396477a729d45b553a3870de2295
+      internalID: 2641961243477468123
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 512
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ce90edb046331e419c5d052576da56c
+      internalID: 8330149765598499142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_3
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 512
+        width: 45
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95c178d20af92b449b41e92ad4c99d60
+      internalID: -5080124913968627958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_5
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 512
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9defb889f38732c43aad33624c2a542c
+      internalID: -1996239033967088809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 512
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8626546d499ca744db7246da803675c0
+      internalID: -7566925429218089238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_9
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 512
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75851a5a1dded145a77793c5a1e1596
+      internalID: -190493737907020990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 437
+        width: 166
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 173a548408d408b4ebb320e33a528c17
+      internalID: -699309376759246106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_9
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28b4ab6981d655848b0dba360525c2df
+      internalID: 1821038250276003952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_10
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04ca0530c79e4c94f853e66e32422c06
+      internalID: 1714889859349342291
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_11
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: de131218199b0df4ca77451bed5efaca
+      internalID: 8571859922949633461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_12
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d37269c519d4e74eaffcbb31be5114a
+      internalID: 1813931812646293503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_13
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705d1a8c492620146ae73e24f31f3717
+      internalID: -7667262607748350988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_14
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba0178ce95c299e41827529115a4ce90
+      internalID: -7016490604597067474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_15
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d69a20926c0e264f880809a5ed32ae5
+      internalID: 5443105760793687515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_3
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 362
+        width: 166
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d76b47cde926dad489f6901ec571c560
+      internalID: -5695102752669080037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_17
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a5ed4df52f0962e4c895307812c966c6
+      internalID: -1187761780020269884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_18
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01885194d46035c44834c850dd0cfa4a
+      internalID: 3106879599153696465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_19
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6129a76bea9b8664abaf7e1554c8fa77
+      internalID: -56051835573387737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_20
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 321248b9f7ce38b40bd44cdf339a44e4
+      internalID: 3684566720344894386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_21
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ecbeed4b60059f04d90786869190d7d5
+      internalID: -1611584262657614574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_22
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93fb141036a84f34face79f01bff2f69
+      internalID: 1460301206039128296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_23
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b09b09db32bbd148bbb6742cda29a3e
+      internalID: 8950846451737907694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 287
+        width: 166
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4628c6375805b5b4fb72f465723b2c44
+      internalID: 4996097008261646531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_0
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76bf1b41dbc403141b49be407a9ab30a
+      internalID: 6749460799510208993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_1
+      rect:
+        serializedVersion: 2
+        x: 292
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d23d251343e7514f8c47cfb91e8d7a3
+      internalID: 4663734450369168098
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_2
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c36f726b842cd74ea87c07eb3b29794
+      internalID: -4289529266382645644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_3
+      rect:
+        serializedVersion: 2
+        x: 379
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee390ec88287cb4fb85332de82a833d
+      internalID: -5978568212566124801
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_5
+      rect:
+        serializedVersion: 2
+        x: 468
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cd1adefaa83b554e8d299eddc7b5a37
+      internalID: -7163494036088297968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_8
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a0db0e25a43f8e4e9b5f2a51d33c225
+      internalID: 7570591958755509145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_9
+      rect:
+        serializedVersion: 2
+        x: 644
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4c4793098b315841bf86649db5bb79a
+      internalID: 8500330232639633728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gd
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 137
+        width: 168
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33941236f3ed3fa43bd7aaeb8305511c
+      internalID: 2646936722262529767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_bd
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 137
+        width: 114
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1641e6e3fe28c314e8184435689e5215
+      internalID: -5436080107990904178
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pr
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 137
+        width: 153
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf27d419a540e6e4ab42c3d13ffbe104
+      internalID: 1927491298078600105
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 512
+        width: 44
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f637d135e1f32546acb4a061ef8097b
+      internalID: -3165758381106782259
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_6
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 512
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e043439fe14737489ba7d64747b983d
+      internalID: 6452593868428554218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_pg_1_7
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 512
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 613b4bca44bff9141a5deadafd2a6cfd
+      internalID: -4009577683838591041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_38
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa538bca0d6477f4aa92fc6ad984907f
+      internalID: -8234329107420375830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_39
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50df102b0fd2c0b4fa873e0edfba0fda
+      internalID: -2119580014079674074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_40
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 437
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd049fe9ee316f642bb492138f08f93d
+      internalID: -6600673840486974106
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_41
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 237b3f03b15d8044eb471ff9e4ac3d64
+      internalID: -2747710678975431171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_42
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5783b5cdb36f09e4f944bf04e8e6840f
+      internalID: -5203471194532683013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_43
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 362
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26dd863d19570fe4c92f1d3750e07960
+      internalID: 6270670896083814442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_6
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5103ff4079582148b5fa38f89bb6973
+      internalID: 749334304309282253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_7
+      rect:
+        serializedVersion: 2
+        x: 554
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e488c5191621b1149b77ff0e196901cf
+      internalID: 8424318034724277427
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perfectdark_gr_4
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 287
+        width: 42
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bd3481ea510be44bbdb9aa2e3f799d3
+      internalID: -6925480065835368525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
