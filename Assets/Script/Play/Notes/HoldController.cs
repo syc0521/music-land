@@ -76,8 +76,8 @@ public class HoldController : Notes
 			StartCoroutine(DestroyNote());
 			InputController.combo = 0;
 			JudgeStatistics.bad++;
-			InputController._instance.ShowJudge(BAD);
-			InputController._instance.ShowCombo(BAD);
+			InputController._instance.ShowJudge(JudgeType.Bad);
+			InputController._instance.ShowCombo(JudgeType.Bad);
 			Debug.Log("not hold");
 			TransparentHold();
 			key.Stop();
@@ -142,12 +142,12 @@ public class HoldController : Notes
 			IsDestroyed = true;
 			StartCoroutine(DestroyNote());
 			StartCoroutine(PlaySingleKey(key));
-			CreateFX(PERFECT);
+			CreateFX(JudgeType.Perfect);
 			InputController.combo++;
 			JudgeStatistics.perfect++;
 			Invoke("holdEnded", note.Dur);
-			InputController._instance.ShowJudge(PERFECT);
-			InputController._instance.ShowCombo(PERFECT);
+			InputController._instance.ShowJudge(JudgeType.Perfect);
+			InputController._instance.ShowCombo(JudgeType.Perfect);
 		}
 	}
 	private void HoldEnded()
@@ -156,8 +156,8 @@ public class HoldController : Notes
 		{
 			InputController.combo++;
 			JudgeStatistics.perfect++;
-			InputController._instance.ShowJudge(PERFECT);
-			InputController._instance.ShowCombo(PERFECT);
+			InputController._instance.ShowJudge(JudgeType.Perfect);
+			InputController._instance.ShowCombo(JudgeType.Perfect);
 		}
 	}
 	private void UserPlayMode()
@@ -172,8 +172,8 @@ public class HoldController : Notes
 		{
 			if (note.CanJudge && ((!previous.CanJudge) || !isFirstNote))
 			{
-				int returnType = NoteJudge(note);
-				if (returnType != POOR && returnType != BAD)
+				JudgeType returnType = NoteJudge(note);
+				if (returnType != JudgeType.Poor && returnType != JudgeType.Bad)
 				{
 					isJudged = true;
 					StartCoroutine(DestroyNote());
@@ -184,7 +184,7 @@ public class HoldController : Notes
 					InputController._instance.ShowFastSlow(returnType);
 					Invoke("HoldEnded", note.Dur);
 				}
-				else if (returnType == BAD && returnType == POOR)
+				else if (returnType == JudgeType.Bad && returnType == JudgeType.Poor)
 				{
 					InputController._instance.ShowCombo(returnType);
 					InputController._instance.ShowFastSlow(returnType);
@@ -201,13 +201,13 @@ public class HoldController : Notes
 			{
 				JudgeStatistics.life -= 8f;
 			}
-			InputController._instance.ShowJudge(POOR);
-			InputController._instance.ShowCombo(POOR);
-			InputController._instance.ShowFastSlow(POOR);
+			InputController._instance.ShowJudge(JudgeType.Poor);
+			InputController._instance.ShowCombo(JudgeType.Poor);
+			InputController._instance.ShowFastSlow(JudgeType.Poor);
 			Debug.Log(note + "poor");
 		}
 	}
-	public override int NoteJudge(NoteAsset note)
+	public override JudgeType NoteJudge(NoteAsset note)
 	{
 		AudioSource audio = key;
 		int pos = note.Pos;
@@ -231,7 +231,7 @@ public class HoldController : Notes
 		}
 		else
 		{
-			int judge = -1;
+			JudgeType judge = JudgeType.Poor;
 			if ((Utils.HoldJudge(KeyCode.D, note) && pos == 0) || (Utils.HoldJudge(KeyCode.F, note) && pos == 1) ||
 				(Utils.HoldJudge(KeyCode.Space, note) && pos == 2) || (Utils.HoldJudge(KeyCode.J, note) && pos == 3) ||
 				(Utils.HoldJudge(KeyCode.K, note) && pos == 4))
@@ -247,7 +247,7 @@ public class HoldController : Notes
 			}
 			return judge;
 		}
-		return -1;
+		return JudgeType.Poor;
 	}
 
 	private IEnumerator Timer()
@@ -298,9 +298,9 @@ public class HoldController : Notes
 		yield return new WaitForSeconds(audio.time / 1000.0f);
 		yield break;
 	}
-	public override void CreateFX(int returnType)
+	public override void CreateFX(JudgeType type)
 	{
-		if (returnType < 3)
+		if ((int)type < 3)
 		{
 			judgeFX = Instantiate(effect) as GameObject;
 			judgeFX.GetComponent<HoldEffect>().duration = note.Dur;

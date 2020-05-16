@@ -8,7 +8,7 @@ public class Settings : MonoBehaviour
 {
 	public GameObject selectCanvas;
 	public Text level;
-	public static int playerLevel;
+	public static int playerLevel = 2;
 	public Slider speed;
 	public Slider volume;
 	public Toggle auto;

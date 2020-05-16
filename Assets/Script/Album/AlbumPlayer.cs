@@ -7,9 +7,15 @@ using UnityEngine.Video;
 
 public class AlbumPlayer : MonoBehaviour
 {
+	/// <summary>
+	/// 渲染纹理（和视频播放有关）
+	/// </summary>
 	public RenderTexture renderTexture;
 	public static Song song;
 	private float length;
+	/// <summary>
+	/// 遮罩动画
+	/// </summary>
 	public PlayableDirector mask;
 
 	void Start()
@@ -26,6 +32,11 @@ public class AlbumPlayer : MonoBehaviour
 			StartCoroutine(JumpScene(0.75f));
 		}
 	}
+	/// <summary>
+	/// 调用协程播放音乐
+	/// </summary>
+	/// <param name="path">路径</param>
+	/// <returns></returns>
 	private IEnumerator PlayAudio(string path)
 	{
 		AudioClip clip = Resources.Load<AudioClip>("Songs/" + path + "/bgm_final");
@@ -37,6 +48,11 @@ public class AlbumPlayer : MonoBehaviour
 		yield return new WaitForSeconds(NoteController.noteDropTime + 0.01f);
 		audiosource.Play();
 	}
+	/// <summary>
+	/// 调用协程播放BGA
+	/// </summary>
+	/// <param name="path">路径</param>
+	/// <returns></returns>
 	private IEnumerator PlayBGA(string path)
 	{
 		VideoClip clip = Resources.Load<VideoClip>("Songs/" + path + "/bga");
@@ -51,6 +67,10 @@ public class AlbumPlayer : MonoBehaviour
 		videoPlayer.Play();
 		yield break;
 	}
+	/// <summary>
+	/// 跳转场景
+	/// </summary>
+	/// <returns></returns>
 	private IEnumerator JumpScene()
 	{
 		yield return new WaitForSeconds(length);
@@ -60,6 +80,11 @@ public class AlbumPlayer : MonoBehaviour
 		SceneManager.LoadScene("Transition");
 		yield break;
 	}
+	/// <summary>
+	/// 中途手动停止后的跳转场景操作
+	/// </summary>
+	/// <param name="length">延迟时间</param>
+	/// <returns></returns>
 	private IEnumerator JumpScene(float length)
 	{
 		yield return new WaitForSeconds(length);

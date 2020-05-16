@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class JudgeStatistics : MonoBehaviour
 {
@@ -17,7 +16,13 @@ public class JudgeStatistics : MonoBehaviour
 	public static bool isDead = false;
 	public static int totalScore;
 	public static float realRate;
+	/// <summary>
+	/// 单例
+	/// </summary>
 	public static JudgeStatistics _instance;
+	/// <summary>
+	/// 数字sprite
+	/// </summary>
 	public Sprite[] numbers = new Sprite[10];
 	public GameObject[] pfObj = new GameObject[4];
 	public GameObject[] grObj = new GameObject[4];
@@ -25,6 +30,9 @@ public class JudgeStatistics : MonoBehaviour
 	public GameObject[] bdObj = new GameObject[4];
 	public GameObject[] prObj = new GameObject[4];
 	public GameObject[] rtObj = new GameObject[3];
+	/// <summary>
+	/// 遮罩
+	/// </summary>
 	public GameObject mask;
 
 	private void Start()
@@ -42,6 +50,9 @@ public class JudgeStatistics : MonoBehaviour
 			rtObj[i].GetComponent<SpriteRenderer>().enabled = false;
 		}
 	}
+	/// <summary>
+	/// 清除之前的判定统计
+	/// </summary>
 	public static void ClearJudge()
 	{
 		perfect = 0;
@@ -81,6 +92,12 @@ public class JudgeStatistics : MonoBehaviour
 		mask.transform.position = new Vector3(mask.transform.position.x, 0.144f + ((3.736f + 0.144f) / 100.0f) * life);
 		mask.transform.localScale = new Vector3(mask.transform.localScale.x, 0.0352f + (1.1171f - 0.0352f) / 100.0f * (100 - life), 1);
 	}
+	/// <summary>
+	/// 数字转数组
+	/// </summary>
+	/// <param name="num">数字</param>
+	/// <param name="index">最大长度</param>
+	/// <returns></returns>
 	private int[] GetNumbers(int num, int index)
 	{
 		char[] tmp = Convert.ToString(num).ToCharArray();
@@ -99,6 +116,13 @@ public class JudgeStatistics : MonoBehaviour
 		}
 		return nums;
 	}
+	/// <summary>
+	/// 显示数组
+	/// </summary>
+	/// <param name="numArray">数组</param>
+	/// <param name="objects"></param>
+	/// <param name="num"></param>
+	/// <param name="index">最大长度</param>
 	private void ShowNumbers(int[] numArray, GameObject[] objects, int num, int index)
 	{
 		index--;

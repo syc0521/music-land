@@ -15,9 +15,18 @@ public class TapController : Notes
 	private AudioSource key;
 	[NonSerialized]
 	public bool isNotePlayed = false;
-	private bool jk0 = false;
-	private bool jk1 = false;
-	private bool jk2 = false;
+	/// <summary>
+	/// 十字键左
+	/// </summary>
+	private bool LeftArrow = false;
+	/// <summary>
+	/// 十字键上
+	/// </summary>
+	private bool UpArrow = false;
+	/// <summary>
+	/// 十字键右
+	/// </summary>
+	private bool RightArrow = false;
 	
 	void Start()
 	{
@@ -68,11 +77,11 @@ public class TapController : Notes
 			{
 				StartCoroutine(PlaySingleKey(key));
 			}
-			CreateFX(PERFECT);
+			CreateFX(JudgeType.Perfect);
 			InputController.combo++;
 			JudgeStatistics.perfect++;
-			InputController._instance.ShowJudge(PERFECT);
-			InputController._instance.ShowCombo(PERFECT);
+			InputController._instance.ShowJudge(JudgeType.Perfect);
+			InputController._instance.ShowCombo(JudgeType.Perfect);
 		}
 	}
 
@@ -89,8 +98,8 @@ public class TapController : Notes
 		{
 			if (note.CanJudge && ((!previous.CanJudge) || !isFirstNote))
 			{
-				int returnType = NoteJudge(note);
-				if (returnType != POOR && returnType != BAD)
+				JudgeType returnType = NoteJudge(note);
+				if (returnType != JudgeType.Poor && returnType != JudgeType.Bad)
 				{
 					isJudged = true;
 					isDestroyed = true;
@@ -101,7 +110,7 @@ public class TapController : Notes
 					InputController._instance.ShowFastSlow(returnType);
 					StartCoroutine(DestroyNote());
 				}
-				else if (returnType == BAD)
+				else if (returnType == JudgeType.Bad)
 				{
 					InputController._instance.ShowCombo(returnType);
 					InputController._instance.ShowFastSlow(returnType);
@@ -118,15 +127,15 @@ public class TapController : Notes
 			{
 				JudgeStatistics.life -= 8f;
 			}
-			InputController._instance.ShowJudge(POOR);
-			InputController._instance.ShowCombo(POOR);
-			InputController._instance.ShowFastSlow(POOR);
+			InputController._instance.ShowJudge(JudgeType.Poor);
+			InputController._instance.ShowCombo(JudgeType.Poor);
+			InputController._instance.ShowFastSlow(JudgeType.Poor);
 			Debug.Log(note + "poor");
 		}
 	}
-	public override void CreateFX(int returnType)
+	public override void CreateFX(JudgeType returnType)
 	{
-		if (returnType < 3)
+		if ((int)returnType < 3)
 		{
 			GameObject judgeFX = Instantiate(effect) as GameObject;
 			judgeFX.transform.position = new Vector3(transform.position.x + 0.4f, -3.44f);
@@ -152,7 +161,7 @@ public class TapController : Notes
 		DestroyImmediate(gameObject);
 		yield break;
 	}
-	public override int NoteJudge(NoteAsset note)
+	public override JudgeType NoteJudge(NoteAsset note)
 	{
 		AudioSource audio = key;
 		int pos = note.Pos;
@@ -160,63 +169,63 @@ public class TapController : Notes
 		{
 			if (Input.GetAxis("LeftRight") < 0 && pos == 0 && note.CanJudge)
 			{
-				if (!jk0)
+				if (!LeftArrow)
 				{
 					if (!isNotePlayed)
 					{
 						StartCoroutine(PlaySingleKey(audio));
 					}
-					int i = JudgeNote(note);
-					if (i != BAD)
+					JudgeType i = JudgeNote(note);
+					if (i != JudgeType.Bad)
 					{
 						return i;
 					}
 				}
-				jk0 = true;
+				LeftArrow = true;
 			}
 			else
 			{
-				jk0 = false;
+				LeftArrow = false;
 			}
 			if (Input.GetAxis("LeftRight") > 0 && pos == 2 && note.CanJudge)
 			{
-				if (!jk2)
+				if (!RightArrow)
 				{
 					if (!isNotePlayed)
 					{
 						StartCoroutine(PlaySingleKey(audio));
 					}
-					int i = JudgeNote(note);
-					if (i != BAD)
+					JudgeType i = JudgeNote(note);
+					if (i != JudgeType.Bad)
 					{
 						return i;
 					}
 				}
-				jk2 = true;
+				RightArrow = true;
 			}
 			else
 			{
-				jk2 = false;
+				RightArrow = false;
 			}
 			if (Input.GetAxis("UpDown") > 0 && pos == 1 && note.CanJudge)
 			{
-				if (!jk1)
+				if (!UpArrow)
 				{
 					if (!isNotePlayed)
 					{
 						StartCoroutine(PlaySingleKey(audio));
 					}
-					int i = JudgeNote(note);
-					if (i != BAD)
+					JudgeType i = JudgeNote(note);
+					if (i != JudgeType.Bad)
 					{
 						return i;
 					}
 				}
-				jk1 = true;
+				UpArrow = true;
 			}
 			else
 			{
-				jk1 = false;
+				UpArrow = false;
 			}
 			if ((Utils.KeyJudge(KeyCode.JoystickButton2, note) && pos == 2) ||
 				(Utils.KeyJudge(KeyCode.JoystickButton3, note) && pos == 3) ||
@@ -236,8 +245,8 @@ public class TapController : Notes
 				(Utils.KeyJudge(KeyCode.Space, note) && pos == 2) || (Utils.KeyJudge(KeyCode.J, note) && pos == 3) ||
 				(Utils.KeyJudge(KeyCode.K, note) && pos == 4))
 			{
-				int i = JudgeNote(note);
-				if (!isNotePlayed && i != BAD)
+				JudgeType i = JudgeNote(note);
+				if (!isNotePlayed && i != JudgeType.Bad)
 				{
 					Debug.Log("play");
 					StartCoroutine(PlaySingleKey(audio));
@@ -245,7 +254,7 @@ public class TapController : Notes
 				return i;
 			}
 		}
-		return -1;
+		return JudgeType.Poor;
 	}
 	public IEnumerator PlaySingleKey(AudioSource audio)
 	{

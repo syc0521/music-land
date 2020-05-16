@@ -6,9 +6,18 @@ using UnityEngine.SceneManagement;
 
 public class AlbumController : MonoBehaviour
 {
+    /// <summary>
+    /// 父对象
+    /// </summary>
     public Transform Content;
     public GameObject album;
+    /// <summary>
+    /// 遮罩动画
+    /// </summary>
     public PlayableDirector mask;
+    /// <summary>
+    /// 单例
+    /// </summary>
     public static AlbumController _instance;
     public static bool isEX;
 
@@ -21,6 +30,9 @@ public class AlbumController : MonoBehaviour
         //    Settings.playerLevel++;
         //}
     }
+    /// <summary>
+    /// 返回场景
+    /// </summary>
     public void ReturnScene()
     {
         PlayMask();
@@ -30,6 +42,9 @@ public class AlbumController : MonoBehaviour
     {
         mask.Play();
     }
+    /// <summary>
+    /// 加载场景
+    /// </summary>
     private void Load()
     {
         if (isEX)

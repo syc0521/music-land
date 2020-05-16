@@ -3,26 +3,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using static NoteController;
 
-public abstract class Notes : MonoBehaviour
+public abstract class Notes : Judge
 {
-	public const int PERFECT = 0;
-	public const int LGREAT = 1;
-	public const int EGREAT = 2;
-	public const int LGOOD = 3;
-	public const int EGOOD = 4;
-	public const int BAD = 5;
-	public const int POOR = -1;
-
+	/// <summary>
+	/// 音符掉落
+	/// </summary>
 	public abstract void DropNote();
-	public abstract int NoteJudge(NoteAsset note);
+	/// <summary>
+	/// 判定音符
+	/// </summary>
+	/// <param name="note">当前note</param>
+	/// <returns>判定id</returns>
+	public abstract JudgeType NoteJudge(NoteAsset note);
+	/// <summary>
+	/// 自动模式
+	/// </summary>
 	public abstract void AutoPlayMode();
-	public abstract void CreateFX(int returnType);
-	public int JudgeNote(NoteAsset note)
+	/// <summary>
+	/// 创建note特效
+	/// </summary>
+	/// <param name="type">判定id</param>
+	public abstract void CreateFX(JudgeType type);
+	public JudgeType JudgeNote(NoteAsset note)
 	{
+		float sceneTime = Time.timeSinceLevelLoad;
 		float time = note.Time;
 		float exactTime = time + noteDropTime + fixedTime;
-		if (Time.timeSinceLevelLoad <= exactTime + perfectTime
-			&& Time.timeSinceLevelLoad > exactTime - perfectTime)
+		if (sceneTime <= exactTime + perfectTime
+			&& sceneTime > exactTime - perfectTime)
 		{
 			Debug.Log(note + "perfect");
 			JudgeStatistics.perfect++;
@@ -30,9 +38,9 @@ public abstract class Notes : MonoBehaviour
 			{
 				JudgeStatistics.life += 0.45f;
 			}
-			return PERFECT;
+			return JudgeType.Perfect;
 		}
-		else if (Time.timeSinceLevelLoad < exactTime + greatTime && Time.timeSinceLevelLoad > exactTime + perfectTime)
+		else if (sceneTime < exactTime + greatTime && sceneTime > exactTime + perfectTime)
 		{
 			Debug.Log(note + "Lgreat");
 			JudgeStatistics.great++;
@@ -40,9 +48,9 @@ public abstract class Notes : MonoBehaviour
 			{
 				JudgeStatistics.life += 0.15f;
 			}
-			return LGREAT;
+			return JudgeType.LGreat;
 		}
-		else if (Time.timeSinceLevelLoad > exactTime - greatTime && Time.timeSinceLevelLoad < exactTime - perfectTime)
+		else if (sceneTime > exactTime - greatTime && sceneTime < exactTime - perfectTime)
 		{
 			Debug.Log(note + "Egreat");
 			JudgeStatistics.great++;
@@ -50,32 +58,32 @@ public abstract class Notes : MonoBehaviour
 			{
 				JudgeStatistics.life += 0.15f;
 			}
-			return EGREAT;
+			return JudgeType.EGreat;
 		}
-		else if (Time.timeSinceLevelLoad < exactTime + goodTime && Time.timeSinceLevelLoad > exactTime + greatTime)
+		else if (sceneTime < exactTime + goodTime && sceneTime > exactTime + greatTime)
 		{
 			Debug.Log(note + "Lgood");
 			JudgeStatistics.good++;
-			return LGOOD;
+			return JudgeType.LGood;
 		}
-		else if (Time.timeSinceLevelLoad > exactTime - goodTime && Time.timeSinceLevelLoad < exactTime - greatTime)
+		else if (sceneTime > exactTime - goodTime && sceneTime < exactTime - greatTime)
 		{
 			Debug.Log(note + "Egood");
 			JudgeStatistics.good++;
-			return EGOOD;
+			return JudgeType.EGood;
 		}
-		else if (Time.timeSinceLevelLoad < exactTime - goodTime && Time.timeSinceLevelLoad > exactTime - badTime)
+		else if (sceneTime < exactTime - goodTime && sceneTime > exactTime - badTime)
 		{
 			Debug.Log(note + "Ebad");
 			JudgeStatistics.bad++;
 			JudgeStatistics.life -= 2f;
-			return BAD;
+			return JudgeType.Bad;
 		}
-		else if (Time.timeSinceLevelLoad < exactTime - badTime)
+		else if (sceneTime < exactTime - badTime)
 		{
-			return POOR;
+			return JudgeType.Poor;
 		}
-		return -2;
+		return JudgeType.Default;
 	}
 
 }

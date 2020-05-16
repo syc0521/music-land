@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using static ReadSong;
 
-public class InputController : MonoBehaviour
+public class InputController : Judge
 {
 	public SpriteRenderer[] padEffects = new SpriteRenderer[5];
 	public static int combo = 0;
@@ -176,15 +176,16 @@ public class InputController : MonoBehaviour
 			});
 		return noteList[nextIndex];
 	}
-	public void ShowCombo(int judgeType)
+	public void ShowCombo(JudgeType type)
 	{
-		if (judgeType != -1)
+		int typeConverted = (int)type;
+		if (type != JudgeType.Poor)
 		{
-			judgeType = (judgeType + 1) / 2;
+			typeConverted = (typeConverted + 1) / 2;
 		}
 		char[] comboChar = Convert.ToString(combo).ToCharArray();
 		GameObject[] comboList = judgeCombo;
-		if (judgeType == -1 || judgeType == 3 || combo == 0)
+		if (typeConverted == -1 || typeConverted == 3 || combo == 0)
 		{
 			for (int i = 0; i < 4; i++)
 			{
@@ -195,7 +196,7 @@ public class InputController : MonoBehaviour
 		{
 			if (combo >= 1000)
 			{
-				UpdateNumbers(judgeType, comboChar);
+				UpdateNumbers((JudgeType)typeConverted, comboChar);
 				comboList[0].transform.position = new Vector3(0.42f, -0.81f);
 				comboList[1].transform.position = new Vector3(1.13f, -0.81f);
 				comboList[2].transform.position = new Vector3(1.91f, -0.81f);
@@ -203,34 +204,34 @@ public class InputController : MonoBehaviour
 			}
 			else if (combo >= 100)
 			{
-				UpdateNumbers(judgeType, comboChar);
+				UpdateNumbers((JudgeType)typeConverted, comboChar);
 				comboList[0].transform.position = new Vector3(0.78f, -0.81f);
 				comboList[1].transform.position = new Vector3(1.56f, -0.81f);
 				comboList[2].transform.position = new Vector3(2.3f, -0.81f);
 			}
 			else if (combo >= 10)
 			{
-				UpdateNumbers(judgeType, comboChar);
+				UpdateNumbers((JudgeType)typeConverted, comboChar);
 				comboList[0].transform.position = new Vector3(1.08f, -0.81f);
 				comboList[1].transform.position = new Vector3(1.82f, -0.81f);
 			}
 			else if (combo >= 1)
 			{
-				UpdateNumbers(judgeType, comboChar);
+				UpdateNumbers((JudgeType)typeConverted, comboChar);
 				comboList[0].transform.position = new Vector3(1.39f, -0.81f);
 			}
 		}
 	}
-	private void UpdateNumbers(int judgeType, char[] comboChar)
+	private void UpdateNumbers(JudgeType type, char[] comboChar)
 	{
 		for (int i = 0; i < comboChar.Length; i++)
 		{
 			GameObject[] comboList = judgeCombo;
-			if (judgeType == 0)
+			if (type == JudgeType.Perfect)
 			{
 				comboList[i].GetComponent<SpriteRenderer>().sprite = perfectNumbers[comboChar[i] - 48];
 			}
-			else if (judgeType == 1 || judgeType == 2)
+			else if (type == JudgeType.LGreat || type == JudgeType.EGreat)
 			{
 				comboList[i].GetComponent<SpriteRenderer>().sprite = greatNumbers[comboChar[i] - 48];
 			}
@@ -240,11 +241,12 @@ public class InputController : MonoBehaviour
 			judgeCombo[i].GetComponent<SpriteRenderer>().enabled = true;
 		}
 	}
-	public void ShowJudge(int judgeType)
+	public void ShowJudge(JudgeType type)
 	{
-		if (judgeType != -1)
+		int typeConverted = (int)type;
+		if (type != JudgeType.Poor)
 		{
-			judgeType = (judgeType + 1) / 2;
+			typeConverted = (typeConverted + 1) / 2;
 		}
 		GameObject judgeOBJ = judgeObj;
 		judgeOBJ.transform.position = new Vector3(-1.59f, -0.79f);
@@ -255,30 +257,30 @@ public class InputController : MonoBehaviour
 		}
 		SpriteRenderer sr = judgeOBJ.GetComponent<SpriteRenderer>();
 		sr.enabled = true;
-		if (judgeType == -1)
+		if (typeConverted == -1)
 		{
 			sr.sprite = judgeTypeSprite[4];
 			judgeOBJ.transform.position = new Vector3(0f, judgeOBJ.transform.position.y);
 		}
-		else if (judgeType == 3)
+		else if (typeConverted == 3)
 		{
-			sr.sprite = judgeTypeSprite[judgeType];
+			sr.sprite = judgeTypeSprite[typeConverted];
 			judgeOBJ.transform.position = new Vector3(0f, judgeOBJ.transform.position.y);
 		}
 		else
 		{
-			sr.sprite = judgeTypeSprite[judgeType];
+			sr.sprite = judgeTypeSprite[typeConverted];
 		}
 		sr.sortingOrder = 7;
 	}
-	public void ShowFastSlow(int judgeType)
+	public void ShowFastSlow(JudgeType type)
 	{
-		if (judgeType == 2 || judgeType == 4)
+		if (type == JudgeType.EGreat || type == JudgeType.EGood)
 		{
 			fastSlowObj.GetComponent<SpriteRenderer>().sprite = fastSlow[0];
 			fastSlowObj.GetComponent<SpriteRenderer>().enabled = true;
 		}
-		else if (judgeType == 1 || judgeType == 3)
+		else if (type == JudgeType.LGreat || type == JudgeType.LGood)
 		{
 			fastSlowObj.GetComponent<SpriteRenderer>().sprite = fastSlow[1];
 			fastSlowObj.GetComponent<SpriteRenderer>().enabled = true;

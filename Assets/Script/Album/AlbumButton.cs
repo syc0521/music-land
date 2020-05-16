@@ -16,6 +16,10 @@ public class AlbumButton : MonoBehaviour
 	{
 		GetTitlePic(song);
 	}
+	/// <summary>
+	/// 获取封面
+	/// </summary>
+	/// <param name="song">当前歌曲</param>
 	private void GetTitlePic(Song song)
 	{
 		try
