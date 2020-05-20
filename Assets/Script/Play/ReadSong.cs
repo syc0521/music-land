@@ -6,6 +6,7 @@ using UnityEngine.Video;
 
 public class ReadSong : MonoBehaviour
 {
+	//TODO: add a esc function
 	public static ReadSong _instance;
 	public static string path;
 	public bool bgaExist;
