@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class Settings : MonoBehaviour
 {
 	public GameObject selectCanvas;
 	public Text level;
-	public static int playerLevel = 2;
+	public static int playerLevel = 0;
 	public Slider speed;
 	public Slider volume;
 	public Toggle auto;
@@ -24,6 +25,9 @@ public class Settings : MonoBehaviour
 	public static Settings _instance;
 	void Start()
 	{
+#if UNITY_EDITOR
+		playerLevel = 2;
+#endif
 		_instance = this;
 		if (playerLevel < 2)
 		{
@@ -43,6 +47,12 @@ public class Settings : MonoBehaviour
 	}
 	void Update()
 	{
+        if (Input.GetKeyDown(KeyCode.U))
+        {
+			playerLevel = 2;
+			Transition.scene = "Select";
+			SceneManager.LoadScene("Transition");
+		}
 		if (Input.GetKeyDown(KeyCode.Escape))
 		{
 			Application.Quit();
