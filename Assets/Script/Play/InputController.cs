@@ -137,9 +137,13 @@ public class InputController : Judge
 			}
 		}
 	}
+	/// <summary>
+	/// 白条速度表示bpm
+	/// </summary>
+	/// <param name="bpm"></param>
 	private void BpmBarChange(int bpm)
 	{
-		Color colorStart = Color.white;
+		Color colorStart = new Color(1, 1, 1, 0.85f);
 		Color colorEnd = new Color(1, 1, 1, 0);
 		float duration = 60.0f / bpm / 2;
 		float lerp = Mathf.PingPong(Time.timeSinceLevelLoad + NoteController.noteDropTime - 0.07f, duration) / duration;
@@ -163,7 +167,6 @@ public class InputController : Judge
 		{
 			return null;
 		}
-
 	}
 	public NoteAsset GetPreviousNote(NoteAsset note)
 	{

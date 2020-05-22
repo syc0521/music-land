@@ -221,13 +221,13 @@ public class HoldController : Notes
 				IsHolded = true;
 				return JudgeNote(note);
 			}
-			else if ((Utils.HoldUpJudge(KeyCode.JoystickButton2, note) && pos == 2) || (Utils.HoldUpJudge(KeyCode.JoystickButton3, note) && pos == 3) ||
-				(Utils.HoldUpJudge(KeyCode.JoystickButton1, note) && pos == 4))
-			{
-				IsHolded = false;
-				IsDestroyed = true;
-				isComplete = false;
-			}
+			//else if ((Utils.HoldUpJudge(KeyCode.JoystickButton2, note) && pos == 2) || (Utils.HoldUpJudge(KeyCode.JoystickButton3, note) && pos == 3) ||
+			//	(Utils.HoldUpJudge(KeyCode.JoystickButton1, note) && pos == 4))
+			//{
+			//	IsHolded = false;
+			//	IsDestroyed = true;
+			//	isComplete = false;
+			//}
 		}
 		else
 		{

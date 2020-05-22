@@ -5,6 +5,15 @@ using UnityEngine;
 public class Utils : MonoBehaviour
 {
 	private static int start;
+	/// <summary>
+	/// 插值运算
+	/// </summary>
+	/// <param name="time">场景时间</param>
+	/// <param name="timeRangeL"></param>
+	/// <param name="timeRangeR"></param>
+	/// <param name="posRangeL"></param>
+	/// <param name="posRangeR"></param>
+	/// <returns></returns>
 	public static float Lerp(float time, float timeRangeL, float timeRangeR, float posRangeL, float posRangeR)
 	{
 		return Mathf.LerpUnclamped(posRangeL, posRangeR, (time - timeRangeL) / (timeRangeR - timeRangeL));

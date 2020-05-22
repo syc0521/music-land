@@ -6,9 +6,9 @@ public class TapEffect : MonoBehaviour
 {
     void Update()
     {
-        StartCoroutine(destroy());
+        StartCoroutine(DestroyEffect());
     }
-    private IEnumerator destroy()
+    private IEnumerator DestroyEffect()
     {
         yield return new WaitForSeconds(0.267f);
         Destroy(gameObject);
