@@ -23,7 +23,6 @@ public class InputController : Judge
 	private readonly Dictionary<int, KeyCode> keyValuePairs = new Dictionary<int, KeyCode>();
 	void Start()
 	{
-		
 		if (isControllerConnected)
 		{
 			keyValuePairs.Add(2, KeyCode.JoystickButton2);
@@ -41,33 +40,26 @@ public class InputController : Judge
 		_instance = this;
 	}
 	void Update()
-    {
-        DetectInput();
-        AddLightEffect();
-        BpmBarChange(bpm);
-    }
+	{
+		DetectInput();
+		AddLightEffect();
+		BpmBarChange(bpm);
+	}
 
-    private void DetectInput()
-    {
-        try
-        {
-            string[] s = Input.GetJoystickNames();
-            if (s[0].Equals("Controller (Xbox One For Windows)") && s[0] != null)
-            {
-                isControllerConnected = true;
-            }
-            else
-            {
-                isControllerConnected = false;
-            }
-        }
-        catch (Exception)
-        {
-            isControllerConnected = false;
-        }
-    }
+	private void DetectInput()
+	{
+		string[] s = Input.GetJoystickNames();
+		if (s.Length != 0 && s[0].Equals("Controller (Xbox One For Windows)"))
+		{
+			isControllerConnected = true;
+		}
+		else
+		{
+			isControllerConnected = false;
+		}
+	}
 
-    private void AddLightEffect()
+	private void AddLightEffect()
 	{
 		if (isControllerConnected)
 		{

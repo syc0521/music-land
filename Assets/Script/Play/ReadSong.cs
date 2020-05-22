@@ -184,6 +184,7 @@ public class ReadSong : MonoBehaviour
         {
 			Transition.scene = "Select";
 		}
+		ReadList.SelectedSong = song;
 		SceneManager.LoadScene("Transition");
 		yield break;
 	}

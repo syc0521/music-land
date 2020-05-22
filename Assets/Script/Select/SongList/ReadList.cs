@@ -64,13 +64,10 @@ public class ReadList : List
 		if (Preference.isFirst)//如果第一次进select场景
 		{
 			GetList();
+			SelectedSong = songList[0];//默认选择歌曲为第一个
 		}
 		ShowItem();
 		Preference.isFirst = false;
-		SelectedSong = songList[0];//默认选择歌曲为第一个
-		diff[0] = SelectedSong.Ez;
-		diff[1] = SelectedSong.Adv;
-		diff[2] = SelectedSong.Hd;
 		ShowLevel();
 		PlayAudio(SelectedSong);
 	}
@@ -128,6 +125,9 @@ public class ReadList : List
 	/// </summary>
 	private void ShowLevel()
 	{
+		diff[0] = SelectedSong.Ez;
+		diff[1] = SelectedSong.Adv;
+		diff[2] = SelectedSong.Hd;
 		for (int i = 0; i < 3; i++)
 		{
 			if (diff[i] > 0)//如果列表当中等级大于0，则显示等级
