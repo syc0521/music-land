@@ -23,18 +23,7 @@ public class InputController : Judge
 	private readonly Dictionary<int, KeyCode> keyValuePairs = new Dictionary<int, KeyCode>();
 	void Start()
 	{
-		try
-		{
-			string[] s = Input.GetJoystickNames();
-			if (s[0].Equals("Controller (Xbox One For Windows)") && s[0] != null)
-			{
-				isControllerConnected = true;
-			}
-		}
-		catch (Exception)
-		{
-			isControllerConnected = false;
-		}
+		
 		if (isControllerConnected)
 		{
 			keyValuePairs.Add(2, KeyCode.JoystickButton2);
@@ -52,6 +41,33 @@ public class InputController : Judge
 		_instance = this;
 	}
 	void Update()
+    {
+        DetectInput();
+        AddLightEffect();
+        BpmBarChange(bpm);
+    }
+
+    private void DetectInput()
+    {
+        try
+        {
+            string[] s = Input.GetJoystickNames();
+            if (s[0].Equals("Controller (Xbox One For Windows)") && s[0] != null)
+            {
+                isControllerConnected = true;
+            }
+            else
+            {
+                isControllerConnected = false;
+            }
+        }
+        catch (Exception)
+        {
+            isControllerConnected = false;
+        }
+    }
+
+    private void AddLightEffect()
 	{
 		if (isControllerConnected)
 		{
@@ -61,8 +77,8 @@ public class InputController : Judge
 		{
 			KeyPadLightEffect();
 		}
-		BpmBarChange(bpm);
 	}
+
 	private void StickLightEffect()
 	{
 		if (Input.GetAxis("LeftRight") < 0)
@@ -150,6 +166,11 @@ public class InputController : Judge
 		Color color = Color.Lerp(colorStart, colorEnd, lerp);
 		bpmBar.GetComponent<SpriteRenderer>().color = color;
 	}
+	/// <summary>
+	/// 获取当前列的下一个note
+	/// </summary>
+	/// <param name="note"></param>
+	/// <returns></returns>
 	public NoteAsset GetNextNote(NoteAsset note)
 	{
 		List<NoteAsset> noteList = NoteController._instance.noteList;
@@ -168,6 +189,11 @@ public class InputController : Judge
 			return null;
 		}
 	}
+	/// <summary>
+	/// 获取当前列的上一个note
+	/// </summary>
+	/// <param name="note"></param>
+	/// <returns></returns>
 	public NoteAsset GetPreviousNote(NoteAsset note)
 	{
 		List<NoteAsset> noteList = NoteController._instance.noteList;
