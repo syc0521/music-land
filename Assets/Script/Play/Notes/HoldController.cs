@@ -30,7 +30,7 @@ public class HoldController : Notes
 		endPos = (8.9f / noteDropTime) * note.Dur;
 		audioPlayer = _instance.GetKey(note);
 		key = audioPlayer.GetComponent<AudioSource>();
-		start.transform.position = new Vector3(basePos * (note.Pos - 2), 5.6f);
+		start.transform.position = new Vector3(basePos * (note.Pos - 2), 5.6f + 0.08f);
 		end.transform.position = new Vector3(basePos * (note.Pos - 2), 5.6f + endPos + 0.08f);
 		fill.GetComponent<LineRenderer>().SetPosition(0, new Vector3(basePos * (note.Pos - 2), 5.6f + endPos));
 		fill.GetComponent<LineRenderer>().SetPosition(1, new Vector3(basePos * (note.Pos - 2), 5.6f + 0.08f));
@@ -77,6 +77,7 @@ public class HoldController : Notes
 			InputController.combo = 0;
 			JudgeStatistics.bad++;
 			InputController._instance.ShowJudge(JudgeType.Bad);
+			InputController._instance.ShowFastSlow(JudgeType.Bad);
 			InputController._instance.ShowCombo(JudgeType.Bad);
 			Debug.Log("not hold");
 			TransparentHold();
@@ -94,10 +95,17 @@ public class HoldController : Notes
 	}
 	private IEnumerator FinishImmediate()
 	{
-		judgeFX.GetComponent<HoldEffect>().Finish();
-		yield return new WaitForSeconds(0.237f);
-		judgeFX.SetActive(false);
-		yield break;
+        if (judgeFX != null)
+        {
+			judgeFX.GetComponent<HoldEffect>().Finish();
+			yield return new WaitForSeconds(0.237f);
+			judgeFX.SetActive(false);
+			yield break;
+		}
+        else
+        {
+			yield return null;
+        }
 	}
 	public override void DropNote()
 	{
@@ -105,7 +113,7 @@ public class HoldController : Notes
 		if (Time.timeSinceLevelLoad < note.Time + ndp)//0上1下
 		{
 			start.transform.position = new Vector3(basePos * (note.Pos - 2),
-				Utils.Lerp(Time.timeSinceLevelLoad, note.Time, ndp + note.Time, 5.6f, -3.2f));
+				Utils.Lerp(Time.timeSinceLevelLoad, note.Time, ndp + note.Time, 5.6f, -3.2f + 0.08f));
 			end.transform.position = new Vector3(basePos * (note.Pos - 2),
 				Utils.Lerp(Time.timeSinceLevelLoad, note.Time, ndp + note.Time, 5.6f + endPos + 0.08f, -3.2f + endPos));
 			fill.GetComponent<LineRenderer>().SetPosition(0, new Vector3(basePos * (note.Pos - 2),
@@ -193,6 +201,7 @@ public class HoldController : Notes
 		}
 		else
 		{
+			TransparentHold();
 			isJudged = true;
 			IsDestroyed = true;
 			InputController.combo = 0;

@@ -55,8 +55,8 @@ public class ReadList : List
 	private void Awake()
 	{
 		//限制帧数
-		QualitySettings.vSyncCount = 0;
-		Application.targetFrameRate = 144;
+		//QualitySettings.vSyncCount = 0;
+		//Application.targetFrameRate = 144;
 	}
 	void Start()
 	{
