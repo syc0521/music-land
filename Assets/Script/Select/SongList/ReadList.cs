@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using System.Linq;
+using UnityEngine.SceneManagement;
 
 public class ReadList : List
 {
@@ -53,6 +54,7 @@ public class ReadList : List
 	public AudioSource music;
 	private void Awake()
 	{
+		//限制帧数
 		QualitySettings.vSyncCount = 0;
 		Application.targetFrameRate = 144;
 	}
@@ -84,8 +86,11 @@ public class ReadList : List
 	public void PlayAudio(Song song)
 	{
 		AudioClip clip = Resources.Load<AudioClip>("Songs/" + song.Path + "/preview");
-		music.clip = clip;
-		music.Play();
+        if (!SceneManager.GetActiveScene().name.Equals("SelectEX"))
+        {
+			music.clip = clip;
+			music.Play();
+		}
 	}
 	/// <summary>
 	/// 显示右侧歌曲列表

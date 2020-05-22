@@ -1,12 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
 public class ReadSong : MonoBehaviour
 {
-	//TODO: add a esc function
 	public static ReadSong _instance;
 	public static string path;
 	public bool bgaExist;
@@ -20,8 +20,11 @@ public class ReadSong : MonoBehaviour
 	private int totalScore;
 	private float length;
 	public static Song song;
-	public SpriteRenderer mask;
-	private float a = 0;
+	/// <summary>
+	/// 遮罩动画
+	/// </summary>
+	public PlayableDirector mask;
+
 	void Awake()
 	{
 		_instance = this;
@@ -128,6 +131,11 @@ public class ReadSong : MonoBehaviour
 	private void Update()
 	{
 		StartCoroutine(JumpScene());
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			mask.Play();
+			StartCoroutine(JumpScene(0.75f));
+		}
 	}
 
 	private void GetFiles(string path)
@@ -160,22 +168,23 @@ public class ReadSong : MonoBehaviour
 	private IEnumerator JumpScene()
 	{
 		yield return new WaitForSeconds(length);
-		ShowMask();
-		yield return new WaitForSeconds(0.7f);
+		mask.Play();
+		yield return new WaitForSeconds(0.65f);
 		SceneManager.LoadScene("Result");
 		yield break;
 	}
-	private void ShowMask()
+	private IEnumerator JumpScene(float length)
 	{
-		mask.enabled = true;
-		if (a >= 0.89f)
-		{
-			a = 1f;
+		yield return new WaitForSeconds(length);
+        if (diff == 3)
+        {
+			Transition.scene = "SelectEX";
 		}
-		else
-		{
-			a += 0.011f;
+        else
+        {
+			Transition.scene = "Select";
 		}
-		mask.color = new Color(0, 0, 0, a);
+		SceneManager.LoadScene("Transition");
+		yield break;
 	}
 }
