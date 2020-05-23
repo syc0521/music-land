@@ -14,7 +14,8 @@ public class Settings : MonoBehaviour
 	public Slider volume;
 	public Toggle auto;
 	public Text spdText, volText;
-	public GameObject canvas;
+	public GameObject settingCanvas;
+	public GameObject helpCanvas;
 	public static float vol;
 	private int skinIndex;
 	public GameObject[] btns = new GameObject[4];
@@ -40,7 +41,8 @@ public class Settings : MonoBehaviour
 			album.SetActive(true);
 		}
 		auto.isOn = false;
-		canvas.SetActive(false);
+		settingCanvas.SetActive(false);
+		helpCanvas.SetActive(false);
 		level.text = "Level : " + playerLevel.ToString();
 		skinScene.Add(0, "Play 1");
 		skinScene.Add(1, "Play");
@@ -98,7 +100,7 @@ public class Settings : MonoBehaviour
 				image.enabled = true;
 			}
 		}
-		canvas.SetActive(false);
+		settingCanvas.SetActive(false);
 	}
 	public void EnterSetting()
 	{
@@ -110,7 +112,31 @@ public class Settings : MonoBehaviour
 				image.enabled = false;
 			}
 		}
-		canvas.SetActive(true);
+		settingCanvas.SetActive(true);
+	}
+	public void CloseHelp()
+	{
+		foreach (GameObject g in btns)
+		{
+			Image image = g.GetComponent<Image>();
+			if (image != null)
+			{
+				image.enabled = true;
+			}
+		}
+		helpCanvas.SetActive(false);
+	}
+	public void EnterHelp()
+	{
+		foreach (GameObject g in btns)
+		{
+			Image image = g.GetComponent<Image>();
+			if (image != null)
+			{
+				image.enabled = false;
+			}
+		}
+		helpCanvas.SetActive(true);
 	}
 	public void GetSkin()
 	{
