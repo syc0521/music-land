@@ -24,6 +24,7 @@ public class Settings : MonoBehaviour
 	public GameObject exmode;
 	public GameObject album;
 	public static Settings _instance;
+	public static bool isExMode = false;
 	void Start()
 	{
 #if UNITY_EDITOR
@@ -42,7 +43,10 @@ public class Settings : MonoBehaviour
 		}
 		auto.isOn = false;
 		settingCanvas.SetActive(false);
-		helpCanvas.SetActive(false);
+        if (!isExMode)
+        {
+			helpCanvas.SetActive(false);
+		}
 		level.text = "Level : " + playerLevel.ToString();
 		skinScene.Add(0, "Play 1");
 		skinScene.Add(1, "Play");

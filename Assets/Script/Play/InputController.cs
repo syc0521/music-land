@@ -169,11 +169,7 @@ public class InputController : Judge
 		int index = noteList.IndexOf(note);
 		try
 		{
-			int nextIndex = noteList.FindIndex(index + 1,
-			delegate (NoteAsset note1)
-			{
-				return note1.Pos == note.Pos;
-			});
+			int nextIndex = noteList.FindIndex(index + 1, note1 => note1.Pos == note.Pos);
 			return noteList[nextIndex];
 		}
 		catch (Exception)
@@ -190,11 +186,7 @@ public class InputController : Judge
 	{
 		List<NoteAsset> noteList = NoteController._instance.noteList;
 		int index = noteList.IndexOf(note);
-		int nextIndex = noteList.FindLastIndex(index,
-			delegate (NoteAsset note1)
-			{
-				return note1.Pos == note.Pos;
-			});
+		int nextIndex = noteList.FindLastIndex(index, note1 => note1.Pos == note.Pos);
 		return noteList[nextIndex];
 	}
 	public void ShowCombo(JudgeType type)
@@ -296,20 +288,21 @@ public class InputController : Judge
 	}
 	public void ShowFastSlow(JudgeType type)
 	{
+		var spriteRenderer = fastSlowObj.GetComponent<SpriteRenderer>();
 		if (type == JudgeType.EGreat || type == JudgeType.EGood)
 		{
-			fastSlowObj.GetComponent<SpriteRenderer>().sprite = fastSlow[0];
-			fastSlowObj.GetComponent<SpriteRenderer>().enabled = true;
+			spriteRenderer.sprite = fastSlow[0];
+			spriteRenderer.enabled = true;
 		}
 		else if (type == JudgeType.LGreat || type == JudgeType.LGood)
 		{
-			fastSlowObj.GetComponent<SpriteRenderer>().sprite = fastSlow[1];
-			fastSlowObj.GetComponent<SpriteRenderer>().enabled = true;
+			spriteRenderer.sprite = fastSlow[1];
+			spriteRenderer.enabled = true;
 		}
 		else
 		{
-			fastSlowObj.GetComponent<SpriteRenderer>().sprite = null;
-			fastSlowObj.GetComponent<SpriteRenderer>().enabled = false;
+			spriteRenderer.sprite = null;
+			spriteRenderer.enabled = false;
 		}
 	}
 

@@ -51,7 +51,7 @@ TextureImporter:
       213: -7611098193822583255
     second: SENA FIRELING_15
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -71,6 +71,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -79,9 +81,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -102,9 +104,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -491,6 +497,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      SENA FIRELING_14: 4721901215814434602
+      SENA FIRELING_5: -7228464556380411122
+      SENA FIRELING_4: 5270922767973792969
+      SENA FIRELING_6: -2615423863302023146
+      SENA FIRELING_15: -7611098193822583255
+      SENA FIRELING_0: -8220548097622847633
+      SENA FIRELING_7: 6986383686386918996
+      SENA FIRELING_12: -4236021924385616292
+      SENA FIRELING_9: 3825974270649688434
+      SENA FIRELING_10: 8823465790061136542
+      SENA FIRELING_8: -7188281400502011836
+      SENA FIRELING_13: 4060209239408888273
+      SENA FIRELING_1: -1749018127369865580
+      SENA FIRELING_11: -688103937636212125
+      SENA FIRELING_2: -8617509713351518086
+      SENA FIRELING_3: 6603667244099392393
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

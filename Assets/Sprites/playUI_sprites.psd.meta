@@ -168,7 +168,7 @@ TextureImporter:
       213: -378187338854755474
     second: playUI_sprites_39
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -188,6 +188,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -197,8 +199,8 @@ TextureImporter:
   textureSettings:
     serializedVersion: 2
     filterMode: 1
-    aniso: -1
-    mipBias: -100
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -219,9 +221,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -551,7 +557,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c56401a94ca01ba00800000000000000
-      internalID: 770408850771691100
+      internalID: 9195827737556727794
       vertices: []
       indices: 
       edges: []
@@ -929,7 +935,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: c94f601d42724f370800000000000000
-      internalID: 8355346247758312604
+      internalID: -2608497207877803967
       vertices: []
       indices: 
       edges: []
@@ -992,7 +998,7 @@ TextureImporter:
       tessellationDetail: 0
       bones: []
       spriteID: 1020e8f9c06ced0e0800000000000000
-      internalID: -2243137806865137151
+      internalID: 5897578071981972050
       vertices: []
       indices: 
       edges: []
@@ -1112,6 +1118,47 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      playUI_sprites_33: 4647264560868021906
+      playUI_sprites_4: -1246932189996524316
+      playUI_sprites_23: -3605705568810570657
+      playUI_sprites_32: 7838075822884291569
+      playUI_sprites_38: -2050939820136958779
+      playUI_sprites_36: 1316198878670793619
+      playUI_sprites_25: -6548883511539415846
+      playUI_sprites_12: -1643243110823093434
+      playUI_sprites_34: 5897578071981972050
+      playUI_sprites_15: -7717459933230616969
+      playUI_sprites_17: 7799168582918116013
+      playUI_sprites_28: -4931038722887128870
+      playUI_sprites_21: -8402508871803798177
+      playUI_sprites_37: -2428493828173735707
+      playUI_sprites_16: 5000660250980490387
+      playUI_sprites_35: 2891024808158494384
+      playUI_sprites_27: -208760561434063337
+      playUI_sprites_18: -3334162646879077525
+      playUI_sprites_29: 2526837639962845529
+      playUI_sprites_50: 3823949004624052807
+      playUI_sprites_10: 7874974699781312059
+      playUI_sprites_11: 2060170687740204065
+      playUI_sprites_22: -8059010684042065989
+      playUI_sprites_13: 9195827737556727794
+      playUI_sprites_19: -6840169196276570418
+      playUI_sprites_26: -9212377180965578413
+      playUI_sprites_31: -2608497207877803967
+      playUI_sprites_6: 6322942140509739583
+      playUI_sprites_3: -5115195327134831369
+      playUI_sprites_0: 6695555682733956228
+      playUI_sprites_2: -9012337404166019140
+      playUI_sprites_1: 4899525701430898958
+      playUI_sprites_5: -3442862510715688429
+      playUI_sprites_9: -8771274664362818465
+      playUI_sprites_7: -805805006833467408
+      playUI_sprites_30: 7326987953439240414
+      playUI_sprites_8: -5006824409650079486
+      playUI_sprites_20: 7909788896926554868
+      playUI_sprites_24: -7193922712640385535
+      playUI_sprites_14: -5836641999150721138
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

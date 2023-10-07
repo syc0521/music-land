@@ -30,6 +30,13 @@ public class JudgeStatistics : MonoBehaviour
 	public GameObject[] bdObj = new GameObject[4];
 	public GameObject[] prObj = new GameObject[4];
 	public GameObject[] rtObj = new GameObject[3];
+	
+	private SpriteRenderer[] pfSprite = new SpriteRenderer[4];
+	private SpriteRenderer[] grSprite = new SpriteRenderer[4];
+	private SpriteRenderer[] gdSprite = new SpriteRenderer[4];
+	private SpriteRenderer[] bdSprite = new SpriteRenderer[4];
+	private SpriteRenderer[] prSprite = new SpriteRenderer[4];
+	private SpriteRenderer[] rtSprite = new SpriteRenderer[3];
 	/// <summary>
 	/// 遮罩
 	/// </summary>
@@ -39,14 +46,21 @@ public class JudgeStatistics : MonoBehaviour
 	{
 		for (int i = 0; i < 4; i++)
 		{
-			pfObj[i].GetComponent<SpriteRenderer>().enabled = false;
-			grObj[i].GetComponent<SpriteRenderer>().enabled = false;
-			gdObj[i].GetComponent<SpriteRenderer>().enabled = false;
-			bdObj[i].GetComponent<SpriteRenderer>().enabled = false;
-			prObj[i].GetComponent<SpriteRenderer>().enabled = false;
+			pfSprite[i] = pfObj[i].GetComponent<SpriteRenderer>(); 
+			grSprite[i] = grObj[i].GetComponent<SpriteRenderer>();
+			gdSprite[i] = gdObj[i].GetComponent<SpriteRenderer>();
+			bdSprite[i] = bdObj[i].GetComponent<SpriteRenderer>();
+			prSprite[i] = prObj[i].GetComponent<SpriteRenderer>();
+
+			pfSprite[i].enabled = false;
+			grSprite[i].enabled = false;
+			gdSprite[i].enabled = false;
+			bdSprite[i].enabled = false;
+			prSprite[i].enabled = false;
 		}
 		for (int i = 0; i < 3; i++)
 		{
+			rtSprite[i] = rtObj[i].GetComponent<SpriteRenderer>();
 			rtObj[i].GetComponent<SpriteRenderer>().enabled = false;
 		}
 	}
@@ -83,12 +97,12 @@ public class JudgeStatistics : MonoBehaviour
 		int[] bdNum = GetNumbers(bad, 4);
 		int[] prNum = GetNumbers(poor, 4);
 		int[] scoreNum = GetNumbers(rt, 3);
-		ShowNumbers(pfNum, pfObj, perfect, 4);
-		ShowNumbers(grNum, grObj, great, 4);
-		ShowNumbers(gdNum, gdObj, good, 4);
-		ShowNumbers(bdNum, bdObj, bad, 4);
-		ShowNumbers(prNum, prObj, poor, 4);
-		ShowNumbers(scoreNum, rtObj, rt, 3);
+		ShowNumbers(pfNum, pfSprite, perfect, 4);
+		ShowNumbers(grNum, grSprite, great, 4);
+		ShowNumbers(gdNum, gdSprite, good, 4);
+		ShowNumbers(bdNum, bdSprite, bad, 4);
+		ShowNumbers(prNum, prSprite, poor, 4);
+		ShowNumbers(scoreNum, rtSprite, rt, 3);
 		mask.transform.position = new Vector3(mask.transform.position.x, 0.144f + ((3.736f + 0.144f) / 100.0f) * life);
 		mask.transform.localScale = new Vector3(mask.transform.localScale.x, 0.0352f + (1.1171f - 0.0352f) / 100.0f * (100 - life), 1);
 	}
@@ -100,7 +114,7 @@ public class JudgeStatistics : MonoBehaviour
 	/// <returns></returns>
 	private int[] GetNumbers(int num, int index)
 	{
-		char[] tmp = Convert.ToString(num).ToCharArray();
+		char[] tmp = num.ToString().ToCharArray();
 		int[] nums = new int[index];
 		for (int i = 0; i < nums.Length; i++)
 		{
@@ -123,17 +137,17 @@ public class JudgeStatistics : MonoBehaviour
 	/// <param name="objects"></param>
 	/// <param name="num"></param>
 	/// <param name="index">最大长度</param>
-	private void ShowNumbers(int[] numArray, GameObject[] objects, int num, int index)
+	private void ShowNumbers(int[] numArray, SpriteRenderer[] objects, int num, int index)
 	{
 		index--;
-		int digit = Convert.ToString(num).ToCharArray().Length;
+		int digit = num.ToString().Length;
 		for (int i = 0; i < numArray.Length; i++)
 		{
-			objects[i].GetComponent<SpriteRenderer>().sprite = numbers[numArray[i]];
+			objects[i].sprite = numbers[numArray[i]];
 		}
 		while (digit > 0)
 		{
-			objects[index].GetComponent<SpriteRenderer>().enabled = true;
+			objects[index].enabled = true;
 			index--;
 			digit--;
 		}

@@ -144,7 +144,7 @@ TextureImporter:
       213: -6925480065835368525
     second: perfectdark_gr_4
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -164,6 +164,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -172,9 +174,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -195,9 +197,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -1235,6 +1241,54 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      perfectdark_38: -8234329107420375830
+      perfectdark_pg_1_9: -190493737907020990
+      perfectdark_gr_1: 4663734450369168098
+      perfectdark_40: -6600673840486974106
+      perfectdark_gd: 2646936722262529767
+      perfectdark_39: -2119580014079674074
+      perfectdark_43: 6270670896083814442
+      perfectdark_pg_2: -699309376759246106
+      perfectdark_pg_1_6: 6452593868428554218
+      perfectdark_42: -5203471194532683013
+      perfectdark_pg_1_8: -7566925429218089238
+      perfectdark_9: 1821038250276003952
+      perfectdark_10: 1714889859349342291
+      perfectdark_20: 3684566720344894386
+      perfectdark_22: 1460301206039128296
+      perfectdark_gr_2: -4289529266382645644
+      perfectdark_gr_3: -5978568212566124801
+      perfectdark_23: 8950846451737907694
+      perfectdark_17: -1187761780020269884
+      perfectdark_21: -1611584262657614574
+      perfectdark_41: -2747710678975431171
+      perfectdark_18: 3106879599153696465
+      perfectdark_pg_1: 7826612305434303138
+      perfectdark_14: -7016490604597067474
+      perfectdark_19: -56051835573387737
+      perfectdark_gr_6: 749334304309282253
+      perfectdark_gr_5: -7163494036088297968
+      perfectdark_pg_3: -5695102752669080037
+      perfectdark_bd: -5436080107990904178
+      perfectdark_pg_1_0: -5788290249391977329
+      perfectdark_pg_1_2: 8330149765598499142
+      perfectdark_12: 1813931812646293503
+      perfectdark_gr_7: 8424318034724277427
+      perfectdark_gr_0: 6749460799510208993
+      perfectdark_pg_1_3: -5080124913968627958
+      perfectdark_pr: 1927491298078600105
+      perfectdark_gr_4: -6925480065835368525
+      perfectdark_pg_1_4: -3165758381106782259
+      perfectdark_gr: 4996097008261646531
+      perfectdark_gr_8: 7570591958755509145
+      perfectdark_15: 5443105760793687515
+      perfectdark_11: 8571859922949633461
+      perfectdark_pg_1_7: -4009577683838591041
+      perfectdark_pg_1_1: 2641961243477468123
+      perfectdark_pg_1_5: -1996239033967088809
+      perfectdark_13: -7667262607748350988
+      perfectdark_gr_9: 8500330232639633728
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

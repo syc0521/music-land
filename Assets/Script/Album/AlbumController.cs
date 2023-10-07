@@ -64,8 +64,7 @@ public class AlbumController : MonoBehaviour
     {
         foreach (Song s in List.songList)
         {
-            GameObject button = Instantiate(album) as GameObject;
-            button.transform.SetParent(Content, false);
+            GameObject button = Instantiate(album, Content, false);
             button.GetComponent<RectTransform>().localScale = new Vector3(1, 1, 1);
             button.GetComponent<AlbumButton>().songName.text = s.Name;
             button.GetComponent<AlbumButton>().songArtist.text = s.Artist;

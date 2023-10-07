@@ -2079,7 +2079,8 @@ MonoBehaviour:
   auto: {fileID: 205676475}
   spdText: {fileID: 1221549965}
   volText: {fileID: 206529482}
-  canvas: {fileID: 1868959156}
+  settingCanvas: {fileID: 1868959156}
+  helpCanvas: {fileID: 0}
   btns:
   - {fileID: 400130293}
   - {fileID: 1167708374}

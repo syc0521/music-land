@@ -39,6 +39,7 @@ public class AlbumButton : MonoBehaviour
 	}
 	private void GoToScene()
 	{
+		LoadScene.scene = "AlbumPlay";
 		SceneManager.LoadScene("Decide");
 	}
 }

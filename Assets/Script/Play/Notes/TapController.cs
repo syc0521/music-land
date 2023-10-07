@@ -72,11 +72,11 @@ public class TapController : Notes
 		{
 			isJudged = true;
 			isDestroyed = true;
-			StartCoroutine(DestroyNote());
 			if (!isNotePlayed)
-			{
+			{ 
 				StartCoroutine(PlaySingleKey(key));
 			}
+			StartCoroutine(DestroyNote());
 			CreateFX(JudgeType.Perfect);
 			InputController.combo++;
 			JudgeStatistics.perfect++;
@@ -258,12 +258,12 @@ public class TapController : Notes
 	}
 	public IEnumerator PlaySingleKey(AudioSource audio)
 	{
-		if (!isNotePlayed)
+		if (!isNotePlayed && audio != null)
 		{
 			audio.enabled = true;
 			yield return new WaitForSeconds(ReadSong.delay);
-			audio.Play();
-			Debug.Log("audio is playing");
+			audio.GetComponent<KeySoundComponent>().Play();
+			//Debug.Log("audio is playing");
 			isNotePlayed = true;
 		}
 		yield break;

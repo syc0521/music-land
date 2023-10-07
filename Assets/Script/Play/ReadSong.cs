@@ -7,7 +7,7 @@ using UnityEngine.Video;
 
 public class ReadSong : MonoBehaviour
 {
-	public static ReadSong _instance;
+	public static ReadSong Instance;
 	public static string path;
 	public bool bgaExist;
 	public static int diff;
@@ -27,7 +27,7 @@ public class ReadSong : MonoBehaviour
 
 	void Awake()
 	{
-		_instance = this;
+		Instance = this;
 		diffs.Add(0, "easy");
 		diffs.Add(1, "advanced");
 		diffs.Add(2, "hard");
@@ -113,7 +113,8 @@ public class ReadSong : MonoBehaviour
 					string[] line = lines[i].Split(' ');
 					string id = line[0].Substring(4, 2);
 					string name = line[1].Substring(0, line[1].Length - 5);
-					NoteController._instance.soundList.Add(id, name);
+					AudioClip clip = Resources.Load<AudioClip>("Songs/" + ReadSong.path + "/key/" + name);
+					NoteController._instance.soundList.Add(id, (name, clip));
 				}
 			}
 		}

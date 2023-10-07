@@ -11,7 +11,7 @@ public class NoteController : MonoBehaviour
 	public GameObject noteLongWhite;
 	public GameObject noteLongBlue;
 	public List<NoteAsset> noteList = new List<NoteAsset>();
-	public Dictionary<string, string> soundList = new Dictionary<string, string>();
+	public Dictionary<string, (string, AudioClip)> soundList = new();
 	public static NoteController _instance;
 	public static float perfectTime = 0.04f;
 	public static float greatTime = 0.065f;
@@ -38,22 +38,22 @@ public class NoteController : MonoBehaviour
 		{
 			if (note.Pos % 2 == 0)
 			{
-				(Instantiate(noteWhite) as GameObject).GetComponent<TapController>().note = note;
+				Instantiate(noteWhite).GetComponent<TapController>().note = note;
 			}
 			else
 			{
-				(Instantiate(noteBlue) as GameObject).GetComponent<TapController>().note = note;
+				Instantiate(noteBlue).GetComponent<TapController>().note = note;
 			}
 		}
 		else
 		{
 			if (note.Pos % 2 == 0)
 			{
-				(Instantiate(noteLongWhite) as GameObject).GetComponent<HoldController>().note = note;
+				Instantiate(noteLongWhite).GetComponent<HoldController>().note = note;
 			}
 			else
 			{
-				(Instantiate(noteLongBlue) as GameObject).GetComponent<HoldController>().note = note;
+				Instantiate(noteLongBlue).GetComponent<HoldController>().note = note;
 			}
 		}
 		yield break;
@@ -62,11 +62,7 @@ public class NoteController : MonoBehaviour
 	{
 		for (int i = 0; i < 5; i++)
 		{
-			int firstIndex = noteList.FindIndex(
-				delegate (NoteAsset note1)
-				{
-					return note1.Pos == i;
-				});
+			int firstIndex = noteList.FindIndex(note1 => note1.Pos == i);
 			if (firstIndex != -1)
 			{
 				noteList[firstIndex].CanJudge = true;
@@ -75,12 +71,12 @@ public class NoteController : MonoBehaviour
 	}
 	public GameObject GetKey(NoteAsset note)
 	{
-		GameObject player = Instantiate(_instance.audioPlayer) as GameObject;
-		string s = _instance.soundList[note.Id];
-		AudioClip clip = Resources.Load<AudioClip>("Songs/" + ReadSong.path + "/key/" + s);
-		AudioSource audiosource = player.AddComponent<AudioSource>();
+		var player = Instantiate(_instance.audioPlayer);
+		var soundData = _instance.soundList[note.Id];
+		var audiosource = player.AddComponent<AudioSource>();
+		player.AddComponent<KeySoundComponent>();
 		audiosource.volume = ReadSong.vol;
-		audiosource.clip = clip;
+		audiosource.clip = soundData.Item2;
 		audiosource.playOnAwake = false;
 		return player;
 	}

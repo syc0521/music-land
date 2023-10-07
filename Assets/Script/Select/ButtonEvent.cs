@@ -43,7 +43,7 @@ public class ButtonEvent : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
 
 	public void OnPointerEnter(PointerEventData eventData)
 	{
-		obj = Instantiate(rect) as GameObject;
+		obj = Instantiate(rect);
 		obj.transform.position = new Vector3(transform.position.x, transform.position.y);
 	}
 

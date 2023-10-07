@@ -66,7 +66,7 @@ TextureImporter:
       213: 7705828642933501688
     second: selectui_20
   externalObjects: {}
-  serializedVersion: 10
+  serializedVersion: 11
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -86,6 +86,8 @@ TextureImporter:
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -94,9 +96,9 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
     wrapW: 1
@@ -117,9 +119,13 @@ TextureImporter:
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
   textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -536,6 +542,25 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      selectui_3: -4265145232703933271
+      selectui_0: 2445042399909683144
+      selectui_8: -3090526772779025630
+      selectui_13: 2342544643969638696
+      selectui_6: -3380854400260208459
+      selectui_9: 3834130985471635225
+      selectui_15: -2082323730055872324
+      selectui_16: 7941339666213022536
+      selectui_10: -2783001098470188750
+      selectui_7: -401338118474995609
+      selectui_14: -4157752552567123049
+      selectui_11: 4547627847181770306
+      selectui_1: 2214155619857205568
+      selectui_18: -7621723602125243084
+      selectui_2: -3414296940001575866
+      selectui_4: -5045156292472854771
+      selectui_12: -3808070501878579073
+      selectui_5: -1472359295994865532
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

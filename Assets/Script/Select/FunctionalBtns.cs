@@ -71,6 +71,7 @@ public class FunctionalBtns : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 		Transition.scene = "SelectEX";
 		mask.Play();
 		Invoke("Load", 0.65f);
+		Settings.isExMode = true;
 	}
 	/// <summary>
 	/// 普通难度按钮
@@ -80,6 +81,7 @@ public class FunctionalBtns : MonoBehaviour, IPointerEnterHandler, IPointerExitH
 		Transition.scene = "Select";
 		mask.Play();
 		Invoke("Load", 0.65f);
+		Settings.isExMode = false;
 	}
 	/// <summary>
 	/// Album模式按钮

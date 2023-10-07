@@ -29,8 +29,7 @@ public abstract class Notes : Judge
 		float sceneTime = Time.timeSinceLevelLoad;
 		float time = note.Time;
 		float exactTime = time + noteDropTime + fixedTime;
-		if (sceneTime <= exactTime + perfectTime
-			&& sceneTime > exactTime - perfectTime)
+		if (sceneTime <= exactTime + perfectTime && sceneTime > exactTime - perfectTime)
 		{
 			Debug.Log(note + "perfect");
 			JudgeStatistics.perfect++;
@@ -40,7 +39,8 @@ public abstract class Notes : Judge
 			}
 			return JudgeType.Perfect;
 		}
-		else if (sceneTime < exactTime + greatTime && sceneTime > exactTime + perfectTime)
+
+		if (sceneTime < exactTime + greatTime && sceneTime > exactTime + perfectTime)
 		{
 			Debug.Log(note + "Lgreat");
 			JudgeStatistics.great++;
@@ -50,7 +50,8 @@ public abstract class Notes : Judge
 			}
 			return JudgeType.LGreat;
 		}
-		else if (sceneTime > exactTime - greatTime && sceneTime < exactTime - perfectTime)
+
+		if (sceneTime > exactTime - greatTime && sceneTime < exactTime - perfectTime)
 		{
 			Debug.Log(note + "Egreat");
 			JudgeStatistics.great++;
@@ -60,26 +61,30 @@ public abstract class Notes : Judge
 			}
 			return JudgeType.EGreat;
 		}
-		else if (sceneTime < exactTime + goodTime && sceneTime > exactTime + greatTime)
+
+		if (sceneTime < exactTime + goodTime && sceneTime > exactTime + greatTime)
 		{
 			Debug.Log(note + "Lgood");
 			JudgeStatistics.good++;
 			return JudgeType.LGood;
 		}
-		else if (sceneTime > exactTime - goodTime && sceneTime < exactTime - greatTime)
+
+		if (sceneTime > exactTime - goodTime && sceneTime < exactTime - greatTime)
 		{
 			Debug.Log(note + "Egood");
 			JudgeStatistics.good++;
 			return JudgeType.EGood;
 		}
-		else if (sceneTime < exactTime - goodTime && sceneTime > exactTime - badTime)
+
+		if (sceneTime < exactTime - goodTime && sceneTime > exactTime - badTime)
 		{
 			Debug.Log(note + "Ebad");
 			JudgeStatistics.bad++;
 			JudgeStatistics.life -= 2f;
 			return JudgeType.Bad;
 		}
-		else if (sceneTime < exactTime - badTime)
+
+		if (sceneTime < exactTime - badTime)
 		{
 			return JudgeType.Poor;
 		}

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -34,11 +35,11 @@ public class Utils : MonoBehaviour
 	}
 	public static bool JoystickUJudge(NoteAsset note)//1
 	{
-		return (Input.GetAxisRaw("UpDown") == 1) && note.CanJudge;
+		return Math.Abs(Input.GetAxisRaw("UpDown") - 1) < Mathf.Epsilon && note.CanJudge;
 	}
 	public static bool JoystickRJudge(NoteAsset note)//2
 	{
-		return (Input.GetAxisRaw("LeftRight") == 1) && note.CanJudge;
+		return Math.Abs(Input.GetAxisRaw("LeftRight") - 1) < Mathf.Epsilon && note.CanJudge;
 	}
 	public static bool HoldJudge(KeyCode key, NoteAsset note)
 	{

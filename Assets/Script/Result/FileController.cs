@@ -118,25 +118,25 @@ public class FileController : MonoBehaviour
 			case 1:
 				mask.Play();
 				GetSong.songName = "End of the Moonlight";
-				Invoke("LoadGetSong", 0.75f);
+				Invoke(nameof(LoadGetSong), 0.75f);
 				break;
 			case 2:
 				mask.Play();
 				GetSong.songName = "Endymion";
-				Invoke("LoadGetMode", 0.75f);
+				Invoke(nameof(LoadGetMode), 0.75f);
 				break;
 			default:
-				if (isEX)
+				if (Settings.isExMode)
 				{
 					mask.Play();
 					Transition.scene = "SelectEX";
-					Invoke("LoadSelect", 0.75f);
+					Invoke(nameof(LoadSelect), 0.75f);
 				}
 				else
 				{
 					mask.Play();
 					Transition.scene = "Select";
-					Invoke("LoadSelect", 0.75f);
+					Invoke(nameof(LoadSelect), 0.75f);
 				}
 				break;
 		}
